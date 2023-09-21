@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\FeatureController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,13 +19,11 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
-    return view('index');
-})->middleware(['auth'])->name('index');
+Route::get('/',[HomeController::class, 'index'
+])->middleware(['auth'])->name('index');
 
-Route::get('/feature', function () {
-    return view('feature');
-})->middleware(['auth'])->name('feature');
+Route::get('/feature',[FeatureController::class, 'index'
+])->middleware(['auth'])->name('feature');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

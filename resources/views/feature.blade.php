@@ -84,41 +84,41 @@ $ave = calc_feature_average();
     </tr>
     <!-- 区切りのため -->
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
     </tr>
-    {{-- <?php foreach ($all as $row) { ?>
-      <tr>
-        <td><?= $row["name"] ?></td>
-        <td><?= $row["artist"] ?></td>
-        <td><?= $row["popularity"] ?></td>
-        <td><?= $row["scale"] ?></td>
-        <td><?= $row["mode"] ?></td>
-        <td><?= $row["danceability"] ?></td>
-        <td><?= $row["acousticness"] ?></td>
-        <td><?= $row["energy"] ?></td>
-        <td><?= $row["instrumentalness"] ?></td>
-        <td><?= $row["liveness"] ?></td>
-        <td><?= $row["loudness"] ?></td>
-        <td><?= $row["speechiness"] ?></td>
-        <td><?= $row["tempo"] ?></td>
-        <td><?= $row["time_signature"] ?></td>
-        <td><?= $row["valence"] ?></td>
-      </tr>
-    <?php } ?> --}}
-  </table>
+    @foreach($all as $row)
+    <tr>
+        <td>{{$row->name}}</td>
+        <td>{{$row->artist}}</td>
+        <td>{{$row->popularity}}</td>
+        <td>{{$row->scale}}</td>
+        <td>{{$row->mode}}</td>
+        <td>{{$row->danceability}}</td>
+        <td>{{$row->acousticness}}</td>
+        <td>{{$row->energy}}</td>
+        <td>{{$row->instrumentalness}}</td>
+        <td>{{$row->liveness}}</td>
+        <td>{{$row->loudness}}</td>
+        <td>{{$row->speechiness}}</td>
+        <td>{{$row->tempo}}</td>
+        <td>{{$row->time_signature}}</td>
+        <td>{{$row->valence}}</td>
+    </tr>
+    @endforeach
+</table>
 
 </x-app-layout>
